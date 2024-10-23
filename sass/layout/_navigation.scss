@@ -1,0 +1,76 @@
+.navigation{
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    grid-template-rows: 9rem 1fr;
+
+    .sidebar{
+        background-color: #fcfcfc;
+        &_logo{
+            width: 100%;
+            height: 100%;
+            border-bottom: 1px solid #d7d2ce;
+        }
+
+        .nav-list{
+            .nav{
+                height: calc(100vh - 17rem);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+               gap: 2rem;
+            }
+            &__icon{
+                width: 100%;
+                height: 4rem;
+                padding:8px 0;
+                &:hover{
+                    background-color: #f2ebe1;
+                }
+            }
+            .que-mark{
+                svg{
+                    width: 60%;
+                    padding: 1rem;
+                    border-radius: 50%;
+                    background-color: black;
+                }
+                display: flex;
+                justify-content: center;
+                
+            }
+        }
+    }
+
+    .side-nav{
+        background-color: #f2ebe1;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #d7d2ce;
+        padding: 2.4rem 2rem 0 4rem;
+
+        p{
+            padding-top: 4px;
+            font-size: 1.4rem;
+            color: black;
+            font-weight: 500;
+        }
+    }
+
+    .navbar {
+        background-color: #f2ebe1;
+        padding: 4rem;
+        .menu{
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: $color-black;
+            .icon {
+                width: 2rem;
+            }
+        }
+        
+    }
+}

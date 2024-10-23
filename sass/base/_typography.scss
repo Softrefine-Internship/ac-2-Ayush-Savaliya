@@ -1,0 +1,17 @@
+%heading {
+    font-family: Outfit;
+    font-weight: 700;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 2.8rem;
+    color: $color-black;
+    line-height: 1;
+}
+
+.heading-2{
+    @extend %heading;
+    font-size: 2.4rem;
+    color: $color-black;
+}
