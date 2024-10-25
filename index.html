@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Test 5 </title>
+    <title>Test 5</title>
   </head>
   <body class="container">
     <nav class="navigation">
@@ -330,7 +330,7 @@
       </div>
     </main>
     <section class="side-page">
-      <div>
+      <div class="side-page-head">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -345,14 +345,105 @@
             d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
           />
         </svg>
+        <div class="side-page__nav flex">
+          <a href="#">Add project</a>
+          <div class="flex profile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="bell icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+              />
+            </svg>
+
+            <div class="flex">
+              <img src="img/person/person2.jpg" alt="user profile picture" />
+              <div class="user-detail">
+                <p>User</p>
+                <h3>Maria</h3>
+              </div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#FCf2ec"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon arrow-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+          </div>
+        </div>
       </div>
-      <div class="side-page__nav">
-        <a href="#">Add project</a>
+      <div class="team">
+        <h2 class="heading-2">Team members</h2>
+        <div class="team-member">
+          <img src="img/person/person1.jpg" alt="team member" />
+          <img src="img/person/person2.jpg" alt="team member" />
+          <p>JR</p>
+          <img src="img/person/person3.jpg" alt="team member" />
+          <img src="img/person/person4.jpg" alt="team member" />
+          <span>+</span>
+        </div>
+      </div>
+      <div class="project-detail flex">
         <div>
-          <img src="img/person/person2.jpg" alt="user profile picture">
-          <div class="user-detail">
-            <p>User</p>
-            <h3>Maria</h3>
+          <p>Project time</p>
+          <h2 class="heading-2">18 hours</h2>
+        </div>
+        <div>
+          <p>Tasks in progress</p>
+          <h2 class="heading-2">2</h2>
+        </div>
+        <div>
+          <p>Finished tasks</p>
+          <h2 class="heading-2">16</h2>
+        </div>
+      </div>
+      <div class="daily-task">
+        <div class="flex">
+          <h2 class="heading-2">Daily tasks (3)</h2>
+          <p class="edit">Edit</p>
+        </div>
+        <div class="boxes">
+          <div class="add">
+            <p>Add new</p>
+          </div>
+          <div class="task">
+            <div class="head-nav flex">
+              <div class="circle circle-1"></div>
+              <p>New</p>
+              <div class="box box-1"></div>
+            </div>
+            <p class="text text-1">Change color palette to more bright</p>
+          </div>
+          <div class="task">
+            <div class="head-nav flex">
+              <div class="circle circle-2"></div>
+              <p>In progress</p>
+              <div class="box box-2"></div>
+            </div>
+            <p class="text text-2">Make prototype for mobile version</p>
+          </div>
+          <div class="task task-3">
+            <div class="head-nav flex">
+              <div class="circle circle-3"></div>
+              <p class="done">Done</p>
+              <div class="box box-3">&#10003</div>
+            </div>
+            <p class="text text-3">Make fixes in homepage</p>
           </div>
         </div>
       </div>

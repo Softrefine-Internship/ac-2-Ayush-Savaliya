@@ -1,6 +1,6 @@
 .navigation{
     display: grid;
-    grid-template-columns: 7rem 1fr;
+    grid-template-columns: 9rem 1fr;
     grid-template-rows: 9rem 1fr;
 
     .sidebar{
@@ -34,6 +34,7 @@
                     padding: 1rem;
                     border-radius: 50%;
                     background-color: black;
+                    stroke: $color-white;
                 }
                 display: flex;
                 justify-content: center;

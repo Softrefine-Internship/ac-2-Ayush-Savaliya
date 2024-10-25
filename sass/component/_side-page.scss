@@ -1,8 +1,188 @@
 .side-page{
     background-color: #fcfcfc;
-    padding: 2.4rem 2.4rem 0 4rem;
+    box-shadow: rgba(149, 157, 165, 0.18) 0px 2px 29px;
+    padding: 2.4rem 4rem 0 4rem;
+    &-head{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
     .dot{
-        float: right;
+        align-self: flex-end;
         width: 5rem;
+        // margin-right: 2.4rem;
+    }
+    .side-page__nav{
+        align-self:normal;
+        gap: 2rem;
+        a:link,
+        a:visited {
+            font-size: 1.6rem;
+            text-decoration: none;
+            display: inline-block;
+            border: 1px solid $color-secondary;
+            background-color: $color-primary;
+            padding: 1rem 3rem;
+            border-radius: 15rem;
+            color: $color-white;
+            cursor: pointer;
+            transition: all .4s;
+        }
+    
+        a:hover,
+        a:active {
+            transform: translateY(-1px);
+            box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 10px;
+        }
+        img{
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+        }
+        .icon{
+            width: 3.4rem;
+            stroke: $color-black;
+        }
+        .arrow-down{
+            rotate: 90deg;
+            stroke: #f2b08a;
+        }
+        .user-detail{
+            p{
+                font-size: 1.4rem;
+                line-height: 1;
+            }
+            h3{
+                font-size: 1.8rem;
+                color: $color-black;
+            }
+        }
+        .profile{
+            justify-content: space-between;
+            align-items: center;
+            gap: 4rem;
+        }
+    }
+    .team{
+        margin-top: 6rem;
+        img{
+            width: 6.2rem;
+            height: 6.2rem;
+            border-radius: 50%;
+        }
+        &-member{
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            p{
+                font-size: 2.4rem;
+                color:$color-secondary;
+                background-color: #fcf2e0;
+                color: #f19d6d;
+                font-weight:400;
+                padding: 1.4rem 2rem;
+                border-radius: 50%;
+            }
+            span{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                align-self: center;
+                padding: 0 0.8rem;
+                font-size: 4rem;
+                height: 4rem;
+                border:2px dashed #f19d6d;
+                border-radius: 50%;
+                color: #f19d6d;
+            }
+        }
+    }
+    .project-detail{
+        width: 100%;
+        height: 11rem;
+        padding:2.6rem;
+        margin: 4rem auto;
+        border-radius: 2rem;
+        box-shadow: rgba(149, 157, 165, 0.4) 0px 2px 29px;
+
+        p{
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+        
+    }
+    .daily-task{
+        .boxes{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1.6rem;
+        }
+        .edit{
+            font-size: 2rem;
+            color: #f19d6d;
+            font-weight: 400;
+        }
+        .task,
+        .add{
+            padding: 2rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            border-radius: 2rem;
+            &-3{
+                background-color: #f0884e;
+            }
+            .head-nav{
+                justify-content: flex-end;
+                .circle {
+                    border-radius: 50%;
+                    width: 8px;
+                    height: 8px;
+                    &-1{background-color: #ff6161;}
+                    &-2{background-color: #00cbb3;}
+                    &-3{background-color: $color-white;}
+                }
+                p{
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    color: $color-black;
+                }
+                .done{
+                    color: $color-white;
+                    font-weight: 300;
+                }
+                .box{
+                    border: 1px solid black;
+                    display: inline;
+                    padding: 5px;
+                    &-1,&-2{border-color: $color-secondary;}
+                    &-3{
+                        padding: 0 3px;
+                        background-color: $color-black;
+                        color: $color-white;
+
+                    }
+                }
+            }
+            .text{
+                margin: 1rem 2rem 0 1rem;
+                font-size: 1.6rem;
+                font-weight: 400;
+                
+                &-1,
+                &-2{
+                    color: $color-black;
+                }
+                &-3{
+                    color: $color-white;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .add{
+            background-color:#fcf2e0;
+        }
     }
 }
