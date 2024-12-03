@@ -1,8 +1,13 @@
 .home{
     padding: 2.4rem 2.4rem 0 4rem;
-    // margin-right: 2rem;
-    // height: 100vh !important;
-    // overflow: hidden;
+    @media (max-width:915px) {
+        grid-column: 2/-1;
+    }
+    @media (max-width:540px) {
+        padding-left: 2rem;
+    }
+    
+    
     input{
         height: 5rem;
         width: 90%;
@@ -14,11 +19,11 @@
         background-position: 2rem center;
         padding: 2.4rem;
         padding-left: 5.2rem;
-        color:$color-grey-light-1;
+        color:$color-black;
         border: 2px solid #d7d2ce;
         border-radius: 10rem;
     }
-
+    
     .project{
         margin-top: 5rem;
         .heading{
@@ -26,24 +31,38 @@
             justify-content: space-between;
             align-items: center;
 
-            p{
+            a{
                 color: $color-primary;
                 font-size: 2.2rem;
                 font-weight: 400;
+                cursor: pointer;
+                text-decoration: none;
             }
         }
         .cards{
             display: flex;
             justify-content: space-between;
-            // height: 10%;
+        
+            @media (max-width:640px) {
+                display: block;
+                padding: 0 4rem;
+            }
+            @media (max-width:540px) {
+                padding: 0;
+            }
         }
         .card{
             margin-top: 3rem;
             padding: 4rem 3rem;
             width:47%;
-            height: 45vh;
-            // height: 42vh;
-            
+            height: 44.2vh;
+            @media (max-width:640px) {
+                width:100%;
+            }
+            @media (max-width:590px) {
+                height:auto;
+                gap: 4rem;
+            }
             border-radius: 3.4rem;
             display: flex;
             flex-direction: column;
@@ -64,7 +83,6 @@
                 }               
             }
             .head{
-                // margin-right: 12rem;
                 display: flex;
                 .people{
                     padding: 0.5rem 1rem;
@@ -144,18 +162,53 @@
                     &-2::before{
                         width: 75%;
                     }
-                }
-                
+                } 
             }
+        }
+        .card:hover{
+            transform: translateY(-2px);
+            transition: all .2s;
         }
 
         .footer-part{
             margin-top: 2rem;
+            @media (max-width:580px) {
+               width: 120%;
+               margin-left: -12rem;
+            }
+            @media (max-width:550px) {
+                margin-left:-10rem;
+            }
+            @media (max-width:455px) {
+                margin-top: 4rem;
+            }
+            @media (max-width:425px) {
+                margin-left:-8rem;
+            }
             .remainder{
+                
                 &-msg{
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    @media (max-width:425px) {
+                        display: block;
+                       
+                    }
+                    .info{
+                        @media (max-width:1060px) and (min-width:915px){
+                            width: 38rem;
+                        }
+                        @media (max-width:770px) {
+                            width: 68%;
+                        }
+                        @media (max-width:585px) {
+                            width: 60%;
+                        }
+                        @media (max-width:425px) {
+                            width: 100%;
+                        }
+                    }
                 }
                 border-radius: 2rem;
                 border: 2px solid #d7d2ce;
@@ -179,6 +232,12 @@
                     color: $color-black;
                     cursor: pointer;
                     transition: all .4s;
+                    @media (max-width:425px) {
+                        display: flex;
+                        align-items: center;
+                        justify-self: center;
+                        margin-top: 1rem;
+                    }
                 }
                 a:hover,
                 a:active{

@@ -1,24 +1,69 @@
 .side-page{
+    @media (max-width:915px) {
+        grid-column: 1/-1;
+        padding: 2rem 5rem;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        column-gap: 4rem;
+    }
+    @media (max-width:710px) {
+        grid-template-columns: 1fr;
+    }
+    @media (max-width:360px) {
+        padding: 1rem 2rem;
+    }
     background-color: #fcfcfc;
     box-shadow: rgba(149, 157, 165, 0.18) 0px 2px 29px;
     padding: 2.4rem 4rem 0 4rem;
     &-head{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        @media (max-width:1085px) and (min-width: 915px) ,
+            (max-width:510px){
+            display: grid;
+            grid-template-columns: 1fr 8rem;
+        }
+        @media (max-width:915px) {
+            margin-top: 2rem;
+            flex-direction: row;
+            justify-content: space-between;
+
+            grid-column: 1/-1;
+        }
     }
     .dot{
         align-self: flex-end;
         width: 5rem;
-        // margin-right: 2.4rem;
+        @media (max-width:1085px),
+            (max-width:510px) {
+            grid-column: 2/-1;
+            align-self: start;
+        }
+
     }
     .side-page__nav{
+        position: relative;
         align-self:normal;
         gap: 2rem;
+        @media (min-width: 915px) and (max-width: 1085px) ,
+            (max-width:510px){
+            grid-column: 1/2;
+            grid-row: 1/2;
+
+            display: grid;
+            grid-template-row: 1fr 1fr;
+        }
+        @media (max-width:915px) {
+            gap: 5rem;
+        } 
+        
         a:link,
         a:visited {
+            @media (max-width:1085px),(max-width:510px){
+                grid-row: 2/3;
+            }
             font-size: 1.6rem;
             text-decoration: none;
             display: inline-block;
@@ -29,6 +74,21 @@
             color: $color-white;
             cursor: pointer;
             transition: all .4s;
+            @media (max-width:1085px) and (min-width:915px),
+            (max-width:510px) {
+                margin: 1rem 0;
+                position: absolute;
+                left: 50%;
+                top: 0%;
+                transform: translate(-30%,0);
+                text-align: center;
+                width: 100%;
+            }
+            @media (max-width:510px) {
+                position: absolute;
+                left: 40%;
+                top: 0%;
+            }
         }
     
         a:hover,
@@ -42,14 +102,29 @@
             border-radius: 50%;
         }
         .icon{
+            cursor: pointer;
             width: 3.4rem;
-            stroke: $color-black;
+            stroke: $color-black;           
+        }
+        .bell{
+            position: relative;
+        }
+        .dot{
+            cursor: pointer;
+            position: absolute;
+            top: -160%;
+            left: 45%;
+            font-size: 6.4rem;
+            color: #f19d6d;
         }
         .arrow-down{
+            cursor: pointer;
             rotate: 90deg;
             stroke: #f2b08a;
         }
+        
         .user-detail{
+            cursor: pointer;
             p{
                 font-size: 1.4rem;
                 line-height: 1;
@@ -63,9 +138,22 @@
             justify-content: space-between;
             align-items: center;
             gap: 4rem;
+
+            
         }
     }
     .team{
+        @media (max-width:915px) {
+           align-self:center;
+            margin-top: 0;
+        }
+        @media (max-width:770px) {
+            margin-top: 2rem;
+            grid-column: 1/-1;
+        }
+        @media (max-width:510px) {
+            margin-top: 8rem;
+        }
         margin-top: 6rem;
         img{
             width: 6.2rem;
@@ -101,6 +189,9 @@
         }
     }
     .project-detail{
+        @media (max-width:770px) {
+            grid-column: 1/-1;
+        }
         width: 100%;
         height: 11rem;
         padding:2.6rem;
@@ -115,10 +206,18 @@
         
     }
     .daily-task{
+        @media (max-width:915px) {
+            grid-column: 1/-1;
+        }
+        
         .boxes{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             gap: 1.6rem;
+            @media (max-width:915px) and (min-width:770px) {
+                grid-template-columns: repeat(4 , 1fr);
+                margin-bottom: 2rem;           
+            }
         }
         .edit{
             font-size: 2rem;
@@ -179,10 +278,27 @@
                     font-weight: 300;
                 }
             }
+
+            &:hover{
+                transform: scale(1.015);
+                transition: all .2s;
+            }
         }
 
         .add{
             background-color:#fcf2e0;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: black;
+            position: relative;
+            &::after{
+                content: "+";
+                font-weight: 200;
+                font-size: 3.2rem;
+                position: absolute;
+                bottom: 1rem;
+                right: 3rem;
+            }
         }
     }
 }
