@@ -1,20 +1,39 @@
 .side-page{
+    padding-bottom: 1rem !important;
+    height: 100vh;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     @media (max-width:915px) {
-        grid-column: 1/-1;
+        overflow: visible;
+        grid-column: 2/-1;
         padding: 2rem 5rem;
-        display: grid;
-        grid-template-columns: repeat(2 , 1fr);
-        column-gap: 4rem;
     }
     @media (max-width:710px) {
         grid-template-columns: 1fr;
     }
-    @media (max-width:360px) {
-        padding: 1rem 2rem;
+    @media (max-width:580px) {
+        
+        grid-row:4;
+        grid-column: 1/-1;
     }
+    @media (max-width:455px) {
+        font-size: 45%;
+        padding: 0 1.4rem 0 1rem;
+        width: 100vw;
+        background-color: #fcfcfc;
+    }
+    // @media (max-width:360px) {
+    //     padding: 1rem 2rem;
+    // }
     background-color: #fcfcfc;
     box-shadow: rgba(149, 157, 165, 0.18) 0px 2px 29px;
-    padding: 2.4rem 4rem 0 4rem;
+    padding: 2rem 3rem 0 3rem;
+    @media (max-width:1060px) and (min-width:915px) {
+        padding: 0 1rem;
+        padding-top: 2rem;
+    }
     &-head{
         display: flex;
             flex-direction: column;
@@ -29,7 +48,6 @@
             margin-top: 2rem;
             flex-direction: row;
             justify-content: space-between;
-
             grid-column: 1/-1;
         }
     }
@@ -40,6 +58,9 @@
             (max-width:510px) {
             grid-column: 2/-1;
             align-self: start;
+        }
+        @media (max-width:580px) {
+            display: none;
         }
 
     }
@@ -93,13 +114,18 @@
     
         a:hover,
         a:active {
-            transform: translateY(-1px);
-            box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 10px;
+            // transform: translateY(-1px);
+            box-shadow: rgba(0, 0, 0, 0.34) 0px 1px 10px;
+            // @media (max-width:1085px){
+            //     transform: translateY(0);
+            //     transform: translateX(0);
+            // }
         }
         img{
             width: 4rem;
             height: 4rem;
             border-radius: 50%;
+            cursor: pointer;
         }
         .icon{
             cursor: pointer;
@@ -137,12 +163,18 @@
         .profile{
             justify-content: space-between;
             align-items: center;
-            gap: 4rem;
+            gap: 2rem; 
 
-            
+            @media (max-width:580px){
+                display: none;
+            }
         }
     }
     .team{
+
+        @media (max-width:1085px){
+            margin-top: 8rem;
+        }
         @media (max-width:915px) {
            align-self:center;
             margin-top: 0;
@@ -154,11 +186,14 @@
         @media (max-width:510px) {
             margin-top: 8rem;
         }
-        margin-top: 6rem;
+        margin-top: 3.2rem;
         img{
             width: 6.2rem;
             height: 6.2rem;
             border-radius: 50%;
+            &:hover {
+                cursor: pointer;
+            }
         }
         &-member{
             margin-top: 1rem;
@@ -185,6 +220,9 @@
                 border:2px dashed #f19d6d;
                 border-radius: 50%;
                 color: #f19d6d;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -206,6 +244,9 @@
         
     }
     .daily-task{
+        .heading-2 {
+                margin-bottom: 1.2rem;
+            }
         @media (max-width:915px) {
             grid-column: 1/-1;
         }
@@ -218,6 +259,7 @@
                 grid-template-columns: repeat(4 , 1fr);
                 margin-bottom: 2rem;           
             }
+            
         }
         .edit{
             font-size: 2rem;
@@ -231,6 +273,9 @@
             border-radius: 2rem;
             &-3{
                 background-color: #f0884e;
+            }
+            &:hover {
+                cursor: pointer;
             }
             .head-nav{
                 justify-content: flex-end;
@@ -251,21 +296,14 @@
                     color: $color-white;
                     font-weight: 300;
                 }
-                .box{
-                    border: 1px solid black;
-                    display: inline;
-                    padding: 5px;
-                    &-1,&-2{border-color: $color-secondary;}
-                    &-3{
-                        padding: 0 3px;
-                        background-color: $color-black;
-                        color: $color-white;
-
-                    }
+                .box:hover {
+                    cursor: pointer;
                 }
+                
             }
             .text{
-                margin: 1rem 2rem 0 1rem;
+                // margin: 1rem 2rem 0 1rem;
+                padding: 1rem 0 0 0;
                 font-size: 1.6rem;
                 font-weight: 400;
                 

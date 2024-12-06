@@ -1,16 +1,20 @@
 .home{
-    padding: 2.4rem 2.4rem 0 4rem;
+    padding: 2rem 2.4rem 0 2.4rem;
     @media (max-width:915px) {
         grid-column: 2/-1;
     }
-    @media (max-width:540px) {
-        padding-left: 2rem;
+    @media (max-width:580px) {
+        grid-column: 1/-1;
+        grid-row: 3;
+        // display: flex;
     }
-    
+    @media (max-width:540px) {
+        // padding-left: 2rem;
+    }
     
     input{
         height: 5rem;
-        width: 90%;
+        width: 100%;
         margin-top: 2rem;
         font-size: 2rem;
         background-image: url(../../img/search.png);
@@ -25,7 +29,12 @@
     }
     
     .project{
-        margin-top: 5rem;
+        height:calc(100vh - 15rem);
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        margin-top: 3.2rem;
         .heading{
             display: flex;
             justify-content: space-between;
@@ -55,13 +64,16 @@
             margin-top: 3rem;
             padding: 4rem 3rem;
             width:47%;
-            height: 44.2vh;
+            height: 41.2vh;
             @media (max-width:640px) {
                 width:100%;
             }
             @media (max-width:590px) {
                 height:auto;
                 gap: 4rem;
+            }
+            &:hover {
+                cursor: pointer;
             }
             border-radius: 3.4rem;
             display: flex;
@@ -171,22 +183,16 @@
         }
 
         .footer-part{
-            margin-top: 2rem;
+            margin-top: 2.6rem;
+            .heading-2{
+                margin-bottom: 1.2rem;
+            }
             @media (max-width:580px) {
-               width: 120%;
-               margin-left: -12rem;
+               width: 100%;
             }
-            @media (max-width:550px) {
-                margin-left:-10rem;
-            }
-            @media (max-width:455px) {
-                margin-top: 4rem;
-            }
-            @media (max-width:425px) {
-                margin-left:-8rem;
-            }
+           
             .remainder{
-                
+               
                 &-msg{
                     display: flex;
                     justify-content: space-between;
@@ -232,6 +238,9 @@
                     color: $color-black;
                     cursor: pointer;
                     transition: all .4s;
+                    @media (max-width:1240px) {
+                        align-self: end;
+                    }
                     @media (max-width:425px) {
                         display: flex;
                         align-items: center;
@@ -256,6 +265,9 @@
                         border-radius: 50%;
                         width: 6px;
                         height: 6px;
+                        &:hover {
+                            cursor: pointer;
+                        }
                         &-1{background-color: #f4b38e;}
                         &-2{background-color: #f8d1bb;}
                         &-3{background-color: #fad9c7;}

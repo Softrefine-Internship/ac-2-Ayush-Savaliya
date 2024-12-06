@@ -7,6 +7,11 @@
 }
 
 html {
+    height: 100vh;
+    // overflow:hidden;
+    // .scrollbar-hide::-webkit-scrollbar {
+    //     display: none;
+    // }
     box-sizing: border-box;
     font-size: 59%;
 
@@ -48,6 +53,7 @@ html {
 
 }
 body {
+    position: relative;
     font-family:Outfit,Lato,sans-serif;
     color: $color-grey-dark-2;
     height: 100vh;
@@ -57,14 +63,17 @@ body {
 }
 
 .container {
+    position: relative;
     display: grid;
     grid-template-columns: 1.6fr 3fr 2fr;
     column-gap: 1rem;
     @media (max-width:1185px) {
         grid-template-columns: 10rem 3fr 2fr;
     }
-    @media (max-width:965px) {
-        grid-template-columns: 10rem 3fr 1.4fr;
+    @media (max-width:580px) {
+        // grid-template-columns: 1fr;
+        grid-template-rows:10rem 10rem 1fr 1fr;
+        // gap: 2rem;
     }
     
 }

@@ -1,4 +1,5 @@
 .navigation{
+    position: relative;
     display: grid;
     grid-template-columns: 9rem 1fr;
     grid-template-rows: 9rem 1fr;
@@ -6,15 +7,106 @@
         grid-template-columns: 10rem;
         grid-template-rows: 9rem 1fr;
     }
+        @media (max-width:915px)  {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 9999;
+        }
+        
+    .profile{
+        display: none;
+        @media (max-width:580px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
+        width: calc(100vw - 10rem);
+        img {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    
+        .icon {
+            cursor: pointer;
+            width: 3.4rem;
+            stroke: $color-black;
+        }
+    
+        .bell {
+            position: relative;
+        }
+    
+        .dot {
+            cursor: pointer;
+            position: absolute;
+            top: -160%;
+            left: 45%;
+            font-size: 6.4rem;
+            color: #f19d6d;
+        }
+    
+        .arrow-down {
+            cursor: pointer;
+            rotate: 90deg;
+            stroke: #f2b08a;
+        }
+    
+        .user-detail {
+            cursor: pointer;
+    
+            p {
+                font-size: 1.4rem;
+                line-height: 1;
+            }
+    
+            h3 {
+                font-size: 1.8rem;
+                color: $color-black;
+            }
+        }
+    
+        @media (max-width:580px) {
+            display: flex;
+            justify-content:flex-end;
+            align-items: center;
+            gap: 3rem;
+            padding-right: 2rem;
+            z-index: 9999;
+            width: calc(100vw - 10rem);
+            grid-column: 2/-1;
+            grid-row: 1;
+            background-color: #Fff;
+        }
+    }
     .sidebar{
         background-color: #fcfcfc;
+        
+        @media (max-width:580px) {
+            margin-top: -1rem;
+            grid-column: 1/-1;
+            grid-row: 2;
+            width: calc(100vw);
+            height: 12rem;
+        }
+
         &_logo{
             width: 100%;
             height: 100%;
             border-bottom: 1px solid #d7d2ce;
+            background-color: #fff;
+            z-index: 9999;
+            // @media (max-width:580px) {
+            //     width: 7rem;
+            //     height: 7rem;
+            // }
         }
 
         .nav-list{
+            
             .nav{
                 height: calc(100vh - 17rem);
                 display: flex;
@@ -22,16 +114,21 @@
                 align-items: center;
                 justify-content: center;
                 gap: 2rem;
+                .icon-menu{
+                    display: none;
+                }
                 @media (max-width:455px) {
                     height: calc(100vh - 30rem);
                 }
-                .icon-menu{
-                    display: none;
+                @media (max-width:580px) {
+                    flex-direction: row;
+                    height: 10rem;
+                    align-items: center;
                 }
                 @media (max-width:1185px) {
                     .icon {
                         position: relative;
-                
+                        
                         &-menu {
                             z-index: 999;
                             width: 25rem;
@@ -44,7 +141,7 @@
                                 font-size: 2rem;
                                 font-weight: 400;
                                 color: #3a3a3a;
-                                background-color: blanchedalmond;
+                                background-color: #f2ebe1;
                                 padding: 1rem 2rem;
                             }
                 
@@ -55,23 +152,48 @@
                         display: block;
                     }
                 }
-                
-            
+                @media (max-width:580px){
+                    .icon {
+                            position: relative;
 
+                            &-menu {
+                                z-index: 999;
+                                width: 25rem;
+                                position: absolute;
+                                top: 120%;
+                                left:-80%;
 
+                                p {
+                                    cursor: pointer;
+                                    font-size: 2rem;
+                                    font-weight: 400;
+                                    color: #3a3a3a;
+                                    background-color: #f2ebe1;
+                                    padding: 1rem 2rem;
+                                }
+
+                            }
+                        }
+
+                    .icon:hover .icon-menu {
+                        display: block;
+                    }
+                }
+               
             }
             &__icon{
                 width: 100%;
                 height: 5.2rem;
                 padding:8px 0;
-                &:hover{
+                svg:hover,
+                .homeicon{
                     background-color: #f2ebe1;
                     color: black;
                 }
                 cursor: pointer;
-                
-                
+               
             }
+                       
             .que-mark{
                 svg{
                     width: 60%;
@@ -83,6 +205,9 @@
                 display: flex;
                 justify-content: center;
                 cursor: pointer;
+                @media (max-width:580px) {
+                    display: none;
+                }
             }
         }
     }
@@ -115,6 +240,7 @@
         .menu{
             position: relative;
             &-head{
+                cursor: pointer;
                 margin-top: 2rem;
                 margin-bottom: 1rem;
                 display: flex;
@@ -128,7 +254,6 @@
             &-body{
                 margin-left: 2rem;
                 padding: 0 1rem;
-                display: none;
                 cursor: pointer;
                 transition: all .4s;
                p{
@@ -147,12 +272,16 @@
                 width: 2.0rem;
             }
         }
-        .menu:hover .menu-body {
-            display: block;
-            transition: all .4s;
-        }
-        .menu:hover .icon{
-            transform: rotate(90deg);
-        }
     }
 }
+
+.menu-body {
+    display: none;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.menu-body.visible {
+    display: block;
+}
+
